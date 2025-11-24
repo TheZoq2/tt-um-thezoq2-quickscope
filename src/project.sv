@@ -11220,7 +11220,7 @@ module \ready_valid::option_ext::impl_22::into_rv_fifo[1533]  (
     logic \read_rst ;
     assign \read_rst  = read_rst_i;
     (* src = "build/libs/ready_valid/src/option_ext.spade:25,29" *)
-    logic[21:0] _e_1901;
+    logic[23:0] _e_1901;
     (* src = "build/libs/ready_valid/src/option_ext.spade:25,29" *)
     logic[17:0] _e_1901_mut;
     (* src = "build/libs/ready_valid/src/option_ext.spade:25,13" *)
@@ -11228,7 +11228,7 @@ module \ready_valid::option_ext::impl_22::into_rv_fifo[1533]  (
     (* src = "build/libs/ready_valid/src/option_ext.spade:25,13" *)
     logic[16:0] \write_mut ;
     (* src = "build/libs/ready_valid/src/option_ext.spade:25,13" *)
-    logic[20:0] \read ;
+    logic[22:0] \read ;
     (* src = "build/libs/ready_valid/src/option_ext.spade:25,13" *)
     logic \read_mut ;
     (* src = "build/libs/ready_valid/src/option_ext.spade:32,13" *)
@@ -11247,15 +11247,15 @@ module \ready_valid::option_ext::impl_22::into_rv_fifo[1533]  (
     \ready_valid::option_ext::enforce_pow2[1560]  enforce_pow2_0();
     (* src = "build/libs/ready_valid/src/option_ext.spade:25,29" *)
     \std::mem::fifo[1561]  fifo_0(.write_clk_i(\write_clk ), .write_rst_i(\write_rst ), .read_clk_i(\read_clk ), .read_rst_i(\read_rst ), .output__(_e_1901), .input__(_e_1901_mut));
-    assign \write  = _e_1901[21];
+    assign \write  = _e_1901[23];
     assign _e_1901_mut[17:1] = \write_mut ;
-    assign \read  = _e_1901[20:0];
+    assign \read  = _e_1901[22:0];
     assign _e_1901_mut[0] = \read_mut ;
     assign \write_mut [16:0] = _e_1902_mut;
     assign _e_1902_mut = \self ;
     assign _e_1907 = \write ;
     assign \write_full_mut  = _e_1907;
-    assign _e_1910 = \read [20:4];
+    assign _e_1910 = \read [22:6];
     assign \read_mut  = _e_1912_mut;
     assign _e_1909 = {_e_1910};
     assign {_e_1912_mut} = _e_1909_mut;
@@ -12095,7 +12095,7 @@ module \std::mem::fifo[1561]  (
         input write_rst_i,
         input read_clk_i,
         input read_rst_i,
-        output[21:0] output__,
+        output[23:0] output__,
         input[17:0] input__
     );
     `ifdef COCOTB_SIM
@@ -12119,59 +12119,59 @@ module \std::mem::fifo[1561]  (
     (* src = "<compiler dir>/stdlib/mem.spade:231,33" *)
     logic[15:0] _e_830;
     (* src = "<compiler dir>/stdlib/mem.spade:231,33" *)
-    logic[24:0] _e_830_mut;
+    logic[28:0] _e_830_mut;
     (* src = "<compiler dir>/stdlib/mem.spade:231,9" *)
-    logic[20:0] \mem_write_mut ;
+    logic[22:0] \mem_write_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:231,9" *)
     logic[15:0] \mem_read ;
     (* src = "<compiler dir>/stdlib/mem.spade:231,9" *)
-    logic[3:0] \mem_read_mut ;
+    logic[5:0] \mem_read_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:233,26" *)
-    logic[3:0] _e_4985;
+    logic[5:0] _e_4985;
     (* src = "<compiler dir>/stdlib/mem.spade:233,26" *)
-    logic[3:0] _e_4985_mut;
+    logic[5:0] _e_4985_mut;
     (* src = "<compiler dir>/stdlib/mem.spade:233,26" *)
-    logic[3:0] _e_4986;
+    logic[5:0] _e_4986;
     (* src = "<compiler dir>/stdlib/mem.spade:233,26" *)
-    logic[3:0] _e_4986_mut;
+    logic[5:0] _e_4986_mut;
     (* src = "<compiler dir>/stdlib/mem.spade:233,26" *)
-    logic[7:0] _e_834;
+    logic[11:0] _e_834;
     (* src = "<compiler dir>/stdlib/mem.spade:233,26" *)
-    logic[7:0] _e_834_mut;
+    logic[11:0] _e_834_mut;
     (* src = "<compiler dir>/stdlib/mem.spade:233,9" *)
-    logic[3:0] \from_w ;
+    logic[5:0] \from_w ;
     (* src = "<compiler dir>/stdlib/mem.spade:233,9" *)
-    logic[3:0] \from_w_mut ;
+    logic[5:0] \from_w_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:233,9" *)
-    logic[3:0] \to_w ;
+    logic[5:0] \to_w ;
     (* src = "<compiler dir>/stdlib/mem.spade:233,9" *)
-    logic[3:0] \to_w_mut ;
+    logic[5:0] \to_w_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:235,17" *)
     logic \write ;
     (* src = "<compiler dir>/stdlib/mem.spade:235,17" *)
     logic[16:0] \write_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:236,16" *)
-    logic[20:0] \read ;
+    logic[22:0] \read ;
     (* src = "<compiler dir>/stdlib/mem.spade:236,16" *)
     logic \read_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:238,5" *)
-    logic[21:0] _e_849;
+    logic[23:0] _e_849;
     (* src = "<compiler dir>/stdlib/mem.spade:238,5" *)
     logic[17:0] _e_849_mut;
     (* src = "<compiler dir>/stdlib/mem.spade:231,33" *)
     \std::mem::dp_bram[1578]  dp_bram_0(.write_clk_i(\write_clk ), .read_clk_i(\read_clk ), .output__(_e_830), .input__(_e_830_mut));
-    assign _e_830_mut[24:4] = \mem_write_mut ;
+    assign _e_830_mut[28:6] = \mem_write_mut ;
     assign \mem_read  = _e_830[15:0];
-    assign _e_830_mut[3:0] = \mem_read_mut ;
+    assign _e_830_mut[5:0] = \mem_read_mut ;
     
     assign _e_4986 = _e_4985_mut;
     assign _e_4985 = _e_4986_mut;
     assign _e_834 = {_e_4985, _e_4986};
     assign {_e_4985_mut, _e_4986_mut} = _e_834_mut;
-    assign \from_w  = _e_834[7:4];
-    assign _e_834_mut[7:4] = \from_w_mut ;
-    assign \to_w  = _e_834[3:0];
-    assign _e_834_mut[3:0] = \to_w_mut ;
+    assign \from_w  = _e_834[11:6];
+    assign _e_834_mut[11:6] = \from_w_mut ;
+    assign \to_w  = _e_834[5:0];
+    assign _e_834_mut[5:0] = \to_w_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:235,17" *)
     \std::mem::fifo_impl::fifo_write[1579]  fifo_write_0(.write_clk_i(\write_clk ), .write_rst_i(\write_rst ), .mem_o(\mem_write_mut ), .from_w_i(\from_w ), .from_w_o(\from_w_mut ), .read_clk_i(\read_clk ), .output__(\write ), .input__(\write_mut ));
     (* src = "<compiler dir>/stdlib/mem.spade:236,16" *)
@@ -12827,7 +12827,7 @@ module \std::mem::dp_bram[1578]  (
         input write_clk_i,
         input read_clk_i,
         output[15:0] output__,
-        input[24:0] input__
+        input[28:0] input__
     );
     `ifdef COCOTB_SIM
     string __top_module;
@@ -12844,11 +12844,11 @@ module \std::mem::dp_bram[1578]  (
     logic \read_clk ;
     assign \read_clk  = read_clk_i;
     (* src = "<compiler dir>/stdlib/mem.spade:76,18" *)
-    logic[3:0] \w_addr_mut ;
+    logic[5:0] \w_addr_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:77,19" *)
     logic[16:0] \w_write_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:78,18" *)
-    logic[3:0] \r_addr_mut ;
+    logic[5:0] \r_addr_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:80,20" *)
     reg[15:0] \undef ;
     (* src = "<compiler dir>/stdlib/mem.spade:81,24" *)
@@ -12860,38 +12860,38 @@ module \std::mem::dp_bram[1578]  (
     logic _e_5014;
     logic _e_5016;
     (* src = "<compiler dir>/stdlib/mem.spade:82,32" *)
-    logic[3:0] _e_641;
+    logic[5:0] _e_641;
     (* src = "<compiler dir>/stdlib/mem.spade:82,20" *)
-    logic[20:0] _e_639;
+    logic[22:0] _e_639;
     (* src = "<compiler dir>/stdlib/mem.spade:83,9" *)
     logic[16:0] _e_644;
     logic _e_5018;
     (* src = "<compiler dir>/stdlib/mem.spade:83,30" *)
-    logic[3:0] _e_647;
+    logic[5:0] _e_647;
     (* src = "<compiler dir>/stdlib/mem.spade:83,17" *)
-    logic[20:0] _e_645;
+    logic[22:0] _e_645;
     (* src = "<compiler dir>/stdlib/mem.spade:81,13" *)
-    logic[20:0] w_n1;
+    logic[22:0] w_n1;
     (* src = "<compiler dir>/stdlib/mem.spade:86,60" *)
-    logic[20:0] _e_653;
+    logic[22:0] _e_653;
     (* src = "<compiler dir>/stdlib/mem.spade:86,29" *)
-    logic[16-1:0] \mem [16-1:0];
+    logic[16-1:0] \mem [64-1:0];
     (* src = "<compiler dir>/stdlib/mem.spade:88,60" *)
-    logic[3:0] _e_660;
+    logic[5:0] _e_660;
     (* src = "<compiler dir>/stdlib/mem.spade:88,33" *)
     logic[15:0] _e_658;
     (* src = "<compiler dir>/stdlib/mem.spade:88,19" *)
     reg[15:0] \read_result ;
     (* src = "<compiler dir>/stdlib/mem.spade:90,6" *)
-    logic[20:0] _e_663_mut;
+    logic[22:0] _e_663_mut;
     (* src = "<compiler dir>/stdlib/mem.spade:90,48" *)
     logic[15:0] _e_666;
     (* src = "<compiler dir>/stdlib/mem.spade:90,48" *)
-    logic[3:0] _e_666_mut;
+    logic[5:0] _e_666_mut;
     (* src = "<compiler dir>/stdlib/mem.spade:90,5" *)
     logic[15:0] _e_662;
     (* src = "<compiler dir>/stdlib/mem.spade:90,5" *)
-    logic[24:0] _e_662_mut;
+    logic[28:0] _e_662_mut;
     (* src = "<compiler dir>/stdlib/mem.spade:76,18" *)
     \std::ports::new_mut_wire[1594]  new_mut_wire_0(.input__(\w_addr_mut ));
     (* src = "<compiler dir>/stdlib/mem.spade:77,19" *)
@@ -12919,13 +12919,13 @@ module \std::mem::dp_bram[1578]  (
         priority casez ({_e_5016, _e_5018})
             2'b1?: w_n1 = _e_639;
             2'b01: w_n1 = _e_645;
-            2'b?: w_n1 = 21'dx;
+            2'b?: w_n1 = 23'dx;
         endcase
     end
     assign _e_653 = {w_n1};
     always @(posedge \write_clk ) begin
-        if (_e_653[20]) begin
-            \mem [_e_653[19:16]] <= _e_653[15:0];
+        if (_e_653[22]) begin
+            \mem [_e_653[21:16]] <= _e_653[15:0];
         end
     end
     assign _e_660 = \r_addr_mut ;
@@ -12945,8 +12945,8 @@ endmodule
 module \std::mem::fifo_impl::fifo_write[1579]  (
         input write_clk_i,
         input write_rst_i,
-        output[20:0] mem_o,
-        input[3:0] from_w_i, output[3:0] from_w_o,
+        output[22:0] mem_o,
+        input[5:0] from_w_i, output[5:0] from_w_o,
         input read_clk_i,
         output output__,
         input[16:0] input__
@@ -12965,26 +12965,26 @@ module \std::mem::fifo_impl::fifo_write[1579]  (
     assign \write_clk  = write_clk_i;
     logic \write_rst ;
     assign \write_rst  = write_rst_i;
-    logic[20:0] \mem_mut ;
+    logic[22:0] \mem_mut ;
     assign mem_o = \mem_mut ;
-    logic[3:0] \from_w ;
+    logic[5:0] \from_w ;
     assign \from_w  = from_w_i;
-    logic[3:0] \from_w_mut ;
+    logic[5:0] \from_w_mut ;
     assign from_w_o = \from_w_mut ;
     logic \read_clk ;
     assign \read_clk  = read_clk_i;
     (* src = "<compiler dir>/stdlib/mem.spade:194,22" *)
-    logic[3:0] _e_762;
+    logic[5:0] _e_762;
     (* src = "<compiler dir>/stdlib/mem.spade:191,13" *)
-    logic[3:0] \read_ptr ;
+    logic[5:0] \read_ptr ;
     (* src = "<compiler dir>/stdlib/mem.spade:197,13" *)
     logic read_clk_n1;
     (* src = "<compiler dir>/stdlib/mem.spade:199,27" *)
     logic[16:0] \write_value_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:202,26" *)
-    logic[4:0] _e_772;
+    logic[6:0] _e_772;
     (* src = "<compiler dir>/stdlib/mem.spade:202,20" *)
-    logic[3:0] _e_771;
+    logic[5:0] _e_771;
     (* src = "<compiler dir>/stdlib/mem.spade:202,20" *)
     logic \full ;
     (* src = "<compiler dir>/stdlib/mem.spade:204,68" *)
@@ -13004,17 +13004,17 @@ module \std::mem::fifo_impl::fifo_write[1579]  (
     logic _e_5024;
     logic _e_5025;
     (* src = "<compiler dir>/stdlib/mem.spade:205,39" *)
-    logic[4:0] _e_791;
+    logic[6:0] _e_791;
     (* src = "<compiler dir>/stdlib/mem.spade:205,33" *)
-    logic[3:0] _e_790;
+    logic[5:0] _e_790;
     (* src = "<compiler dir>/stdlib/mem.spade:206,13" *)
     logic[17:0] \_ ;
     (* src = "<compiler dir>/stdlib/mem.spade:204,56" *)
-    logic[3:0] _e_781;
+    logic[5:0] _e_781;
     (* src = "<compiler dir>/stdlib/mem.spade:204,24" *)
-    reg[3:0] \write_ptr ;
+    reg[5:0] \write_ptr ;
     (* src = "<compiler dir>/stdlib/mem.spade:209,13" *)
-    logic[3:0] _e_796_mut;
+    logic[5:0] _e_796_mut;
     (* src = "<compiler dir>/stdlib/mem.spade:210,13" *)
     logic[16:0] _e_800_mut;
     (* src = "<compiler dir>/stdlib/mem.spade:210,39" *)
@@ -13042,23 +13042,23 @@ module \std::mem::fifo_impl::fifo_write[1579]  (
     (* src = "<compiler dir>/stdlib/mem.spade:210,27" *)
     logic[16:0] _e_802;
     (* src = "<compiler dir>/stdlib/mem.spade:215,13" *)
-    logic[3:0] _e_816_mut;
+    logic[5:0] _e_816_mut;
     (* src = "<compiler dir>/stdlib/mem.spade:216,9" *)
     logic _e_820;
     (* src = "<compiler dir>/stdlib/mem.spade:216,9" *)
     logic[16:0] _e_820_mut;
-    assign _e_762 = \from_w [3:0];
+    assign _e_762 = \from_w [5:0];
     (* src = "<compiler dir>/stdlib/mem.spade:191,13" *)
     \std::cdc::sync_uint_counter[1596]  sync_uint_counter_0(.source_clk_i(\read_clk ), .dest_clk_i(\write_clk ), .in_i(_e_762), .output__(\read_ptr ));
     localparam[0:0] _e_766 = 0;
     assign read_clk_n1 = _e_766;
     (* src = "<compiler dir>/stdlib/mem.spade:199,27" *)
     \std::ports::new_mut_wire[1595]  new_mut_wire_0(.input__(\write_value_mut ));
-    localparam[3:0] _e_774 = 1;
+    localparam[5:0] _e_774 = 1;
     assign _e_772 = \write_ptr  + _e_774;
-    assign _e_771 = _e_772[3:0];
+    assign _e_771 = _e_772[5:0];
     assign \full  = _e_771 == \read_ptr ;
-    localparam[3:0] _e_780 = 0;
+    localparam[5:0] _e_780 = 0;
     assign _e_783 = \write_value_mut ;
     assign _e_782 = {_e_783, \full };
     assign _e_789 = _e_782;
@@ -13070,16 +13070,16 @@ module \std::mem::fifo_impl::fifo_write[1579]  (
     assign _e_5023 = _e_5021 && _e_5022;
     assign _e_5024 = !_e_788;
     assign _e_5025 = _e_5023 && _e_5024;
-    localparam[3:0] _e_793 = 1;
+    localparam[5:0] _e_793 = 1;
     assign _e_791 = \write_ptr  + _e_793;
-    assign _e_790 = _e_791[3:0];
+    assign _e_790 = _e_791[5:0];
     assign \_  = _e_782;
     localparam[0:0] _e_5026 = 1;
     always_comb begin
         priority casez ({_e_5025, _e_5026})
             2'b1?: _e_781 = _e_790;
             2'b01: _e_781 = \write_ptr ;
-            2'b?: _e_781 = 4'dx;
+            2'b?: _e_781 = 6'dx;
         endcase
     end
     always @(posedge \write_clk ) begin
@@ -13090,7 +13090,7 @@ module \std::mem::fifo_impl::fifo_write[1579]  (
             \write_ptr  <= _e_781;
         end
     end
-    assign \mem_mut [20:17] = _e_796_mut;
+    assign \mem_mut [22:17] = _e_796_mut;
     assign _e_796_mut = \write_ptr ;
     assign \mem_mut [16:0] = _e_800_mut;
     assign _e_805 = \write_value_mut ;
@@ -13116,7 +13116,7 @@ module \std::mem::fifo_impl::fifo_write[1579]  (
         endcase
     end
     assign _e_800_mut = _e_802;
-    assign \from_w_mut [3:0] = _e_816_mut;
+    assign \from_w_mut [5:0] = _e_816_mut;
     assign _e_816_mut = \write_ptr ;
     assign _e_820 = {\full };
     assign {\write_value_mut } = _e_820_mut;
@@ -13127,10 +13127,10 @@ endmodule
 module \std::mem::fifo_impl::fifo_read[1580]  (
         input read_clk_i,
         input read_rst_i,
-        input[15:0] mem_i, output[3:0] mem_o,
-        input[3:0] to_w_i, output[3:0] to_w_o,
+        input[15:0] mem_i, output[5:0] mem_o,
+        input[5:0] to_w_i, output[5:0] to_w_o,
         input write_clk_i,
-        output[20:0] output__,
+        output[22:0] output__,
         input input__
     );
     `ifdef COCOTB_SIM
@@ -13149,18 +13149,18 @@ module \std::mem::fifo_impl::fifo_read[1580]  (
     assign \read_rst  = read_rst_i;
     logic[15:0] \mem ;
     assign \mem  = mem_i;
-    logic[3:0] \mem_mut ;
+    logic[5:0] \mem_mut ;
     assign mem_o = \mem_mut ;
-    logic[3:0] \to_w ;
+    logic[5:0] \to_w ;
     assign \to_w  = to_w_i;
-    logic[3:0] \to_w_mut ;
+    logic[5:0] \to_w_mut ;
     assign to_w_o = \to_w_mut ;
     logic \write_clk ;
     assign \write_clk  = write_clk_i;
     (* src = "<compiler dir>/stdlib/mem.spade:143,22" *)
-    logic[3:0] _e_675;
+    logic[5:0] _e_675;
     (* src = "<compiler dir>/stdlib/mem.spade:140,13" *)
-    logic[3:0] \write_ptr ;
+    logic[5:0] \write_ptr ;
     (* src = "<compiler dir>/stdlib/mem.spade:146,13" *)
     logic write_clk_n1;
     (* src = "<compiler dir>/stdlib/mem.spade:148,19" *)
@@ -13187,9 +13187,9 @@ module \std::mem::fifo_impl::fifo_read[1580]  (
     logic _e_5041;
     logic _e_5042;
     (* src = "<compiler dir>/stdlib/mem.spade:154,36" *)
-    logic[4:0] _e_700;
+    logic[6:0] _e_700;
     (* src = "<compiler dir>/stdlib/mem.spade:154,30" *)
-    logic[3:0] _e_699;
+    logic[5:0] _e_699;
     (* src = "<compiler dir>/stdlib/mem.spade:155,13" *)
     logic[1:0] _e_705;
     (* src = "<compiler dir>/stdlib/mem.spade:155,13" *)
@@ -13199,27 +13199,27 @@ module \std::mem::fifo_impl::fifo_read[1580]  (
     logic _e_5044;
     logic _e_5046;
     (* src = "<compiler dir>/stdlib/mem.spade:152,29" *)
-    logic[3:0] \read_ptr_next ;
+    logic[5:0] \read_ptr_next ;
     (* src = "<compiler dir>/stdlib/mem.spade:157,23" *)
-    reg[3:0] \read_ptr ;
+    reg[5:0] \read_ptr ;
     (* src = "<compiler dir>/stdlib/mem.spade:159,19" *)
     logic[15:0] \out ;
     (* src = "<compiler dir>/stdlib/mem.spade:169,36" *)
     logic _e_721;
     (* src = "<compiler dir>/stdlib/mem.spade:169,58" *)
-    logic[4:0] _e_726;
+    logic[6:0] _e_726;
     (* src = "<compiler dir>/stdlib/mem.spade:169,58" *)
-    logic[5:0] _e_725;
-    logic[5:0] _e_731;
+    logic[7:0] _e_725;
+    logic[7:0] _e_731;
     (* src = "<compiler dir>/stdlib/mem.spade:169,33" *)
-    logic[5:0] \write_ptr_abs ;
-    logic[5:0] _e_737;
+    logic[7:0] \write_ptr_abs ;
+    logic[7:0] _e_737;
     (* src = "<compiler dir>/stdlib/mem.spade:171,19" *)
-    logic[6:0] _e_735;
+    logic[8:0] _e_735;
     (* src = "<compiler dir>/stdlib/mem.spade:171,13" *)
-    logic[3:0] \num_elements ;
+    logic[5:0] \num_elements ;
     (* src = "<compiler dir>/stdlib/mem.spade:174,13" *)
-    logic[3:0] _e_740_mut;
+    logic[5:0] _e_740_mut;
     (* src = "<compiler dir>/stdlib/mem.spade:177,23" *)
     logic _e_747;
     (* src = "<compiler dir>/stdlib/mem.spade:177,32" *)
@@ -13229,10 +13229,10 @@ module \std::mem::fifo_impl::fifo_read[1580]  (
     (* src = "<compiler dir>/stdlib/mem.spade:177,20" *)
     logic[16:0] _e_745;
     (* src = "<compiler dir>/stdlib/mem.spade:176,9" *)
-    logic[20:0] _e_744;
+    logic[22:0] _e_744;
     (* src = "<compiler dir>/stdlib/mem.spade:176,9" *)
     logic _e_744_mut;
-    assign _e_675 = \to_w [3:0];
+    assign _e_675 = \to_w [5:0];
     (* src = "<compiler dir>/stdlib/mem.spade:140,13" *)
     \std::cdc::sync_uint_counter[1596]  sync_uint_counter_0(.source_clk_i(\write_clk ), .dest_clk_i(\read_clk ), .in_i(_e_675), .output__(\write_ptr ));
     localparam[0:0] _e_679 = 0;
@@ -13251,9 +13251,9 @@ module \std::mem::fifo_impl::fifo_read[1580]  (
     assign _e_697 = _e_688[0];
     assign _e_5041 = !_e_697;
     assign _e_5042 = _e_696 && _e_5041;
-    localparam[3:0] _e_702 = 1;
+    localparam[5:0] _e_702 = 1;
     assign _e_700 = \read_ptr  + _e_702;
-    assign _e_699 = _e_700[3:0];
+    assign _e_699 = _e_700[5:0];
     assign _e_705 = _e_688;
     assign _e_703 = _e_688[1];
     assign \_  = _e_688[0];
@@ -13265,10 +13265,10 @@ module \std::mem::fifo_impl::fifo_read[1580]  (
             3'b1??: \read_ptr_next  = \read_ptr ;
             3'b01?: \read_ptr_next  = _e_699;
             3'b001: \read_ptr_next  = \read_ptr ;
-            3'b?: \read_ptr_next  = 4'dx;
+            3'b?: \read_ptr_next  = 6'dx;
         endcase
     end
-    localparam[3:0] _e_711 = 0;
+    localparam[5:0] _e_711 = 0;
     always @(posedge \read_clk ) begin
         if (\read_rst ) begin
             \read_ptr  <= _e_711;
@@ -13280,16 +13280,16 @@ module \std::mem::fifo_impl::fifo_read[1580]  (
     (* src = "<compiler dir>/stdlib/mem.spade:159,19" *)
     \std::mem::read_read_port[1597]  read_read_port_0(.read_clk_i(\read_clk ), .addr_i(\read_ptr_next ), .p_i(\mem ), .p_o(\mem_mut ), .output__(\out ));
     assign _e_721 = \write_ptr  < \read_ptr ;
-    localparam[3:0] _e_728 = 0;
+    localparam[5:0] _e_728 = 0;
     assign _e_726 = \write_ptr  + _e_728;
-    localparam[4:0] _e_729 = 16;
+    localparam[6:0] _e_729 = 64;
     assign _e_725 = _e_726 + _e_729;
     assign _e_731 = {2'b0, \write_ptr };
     assign \write_ptr_abs  = _e_721 ? _e_725 : _e_731;
     assign _e_737 = {2'b0, \read_ptr };
     assign _e_735 = \write_ptr_abs  - _e_737;
-    assign \num_elements  = _e_735[3:0];
-    assign \to_w_mut [3:0] = _e_740_mut;
+    assign \num_elements  = _e_735[5:0];
+    assign \to_w_mut [5:0] = _e_740_mut;
     assign _e_740_mut = \read_ptr ;
     assign _e_747 = !\empty ;
     assign _e_750 = {1'd1, \out };
@@ -14421,7 +14421,7 @@ module \std::conv::std::conv::flip_array::T[1593]  (
 endmodule
 
 module \std::ports::new_mut_wire[1594]  (
-        input[3:0] input__
+        input[5:0] input__
     );
     `ifdef COCOTB_SIM
     string __top_module;
@@ -14434,20 +14434,20 @@ module \std::ports::new_mut_wire[1594]  (
     end
     `endif
     (* src = "<compiler dir>/stdlib/ports.spade:2,5" *)
-    logic[3:0] _e_5115;
+    logic[5:0] _e_5115;
     (* src = "<compiler dir>/stdlib/ports.spade:2,5" *)
-    logic[3:0] _e_5116_mut;
+    logic[5:0] _e_5116_mut;
     (* src = "<compiler dir>/stdlib/ports.spade:2,5" *)
-    logic[3:0] _e_1124;
+    logic[5:0] _e_1124;
     (* src = "<compiler dir>/stdlib/ports.spade:2,5" *)
-    logic[3:0] _e_1124_mut;
+    logic[5:0] _e_1124_mut;
     (* src = "<compiler dir>/stdlib/ports.spade:2,5" *)
-    logic[3:0] _e_1123_mut;
+    logic[5:0] _e_1123_mut;
     
     assign _e_5115 = _e_5116_mut;
     assign _e_1124 = {_e_5115};
     assign {_e_5116_mut} = _e_1124_mut;
-    assign _e_1124_mut[3:0] = _e_1123_mut;
+    assign _e_1124_mut[5:0] = _e_1123_mut;
     assign _e_1123_mut = input__;
 endmodule
 
@@ -14485,8 +14485,8 @@ endmodule
 module \std::cdc::sync_uint_counter[1596]  (
         input source_clk_i,
         input dest_clk_i,
-        input[3:0] in_i,
-        output[3:0] output__
+        input[5:0] in_i,
+        output[5:0] output__
     );
     `ifdef COCOTB_SIM
     string __top_module;
@@ -14502,16 +14502,16 @@ module \std::cdc::sync_uint_counter[1596]  (
     assign \source_clk  = source_clk_i;
     logic \dest_clk ;
     assign \dest_clk  = dest_clk_i;
-    logic[3:0] \in ;
+    logic[5:0] \in ;
     assign \in  = in_i;
     (* src = "<compiler dir>/stdlib/cdc.spade:25,28" *)
-    logic[3:0] _e_128;
+    logic[5:0] _e_128;
     (* src = "<compiler dir>/stdlib/cdc.spade:25,21" *)
-    reg[3:0] \gray ;
+    reg[5:0] \gray ;
     (* src = "<compiler dir>/stdlib/cdc.spade:26,26" *)
-    logic[3:0] _e_132;
+    logic[5:0] _e_132;
     (* src = "<compiler dir>/stdlib/cdc.spade:26,5" *)
-    logic[3:0] _e_130;
+    logic[5:0] _e_130;
     (* src = "<compiler dir>/stdlib/cdc.spade:25,28" *)
     \std::ops::bin_to_gray[1610]  bin_to_gray_0(.x_i(\in ), .output__(_e_128));
     always @(posedge \source_clk ) begin
@@ -14526,8 +14526,8 @@ endmodule
 
 module \std::mem::read_read_port[1597]  (
         input read_clk_i,
-        input[3:0] addr_i,
-        input[15:0] p_i, output[3:0] p_o,
+        input[5:0] addr_i,
+        input[15:0] p_i, output[5:0] p_o,
         output[15:0] output__
     );
     `ifdef COCOTB_SIM
@@ -14542,14 +14542,14 @@ module \std::mem::read_read_port[1597]  (
     `endif
     logic \read_clk ;
     assign \read_clk  = read_clk_i;
-    logic[3:0] \addr ;
+    logic[5:0] \addr ;
     assign \addr  = addr_i;
     logic[15:0] \p ;
     assign \p  = p_i;
-    logic[3:0] \p_mut ;
+    logic[5:0] \p_mut ;
     assign p_o = \p_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:69,1" *)
-    reg[3:0] \s1_addr ;
+    reg[5:0] \s1_addr ;
     (* src = "<compiler dir>/stdlib/mem.spade:68,18" *)
     logic[15:0] \result ;
     always @(posedge \read_clk ) begin
@@ -14967,8 +14967,8 @@ module \std::mem::read_read_port[1609]  (
 endmodule
 
 module \std::ops::bin_to_gray[1610]  (
-        input[3:0] x_i,
-        output[3:0] output__
+        input[5:0] x_i,
+        output[5:0] output__
     );
     `ifdef COCOTB_SIM
     string __top_module;
@@ -14980,13 +14980,13 @@ module \std::ops::bin_to_gray[1610]  (
         end
     end
     `endif
-    logic[3:0] \x ;
+    logic[5:0] \x ;
     assign \x  = x_i;
     (* src = "<compiler dir>/stdlib/ops.spade:58,5" *)
-    logic[3:0] _e_895;
+    logic[5:0] _e_895;
     (* src = "<compiler dir>/stdlib/ops.spade:58,5" *)
-    logic[3:0] _e_894;
-    localparam[3:0] _e_897 = 1;
+    logic[5:0] _e_894;
+    localparam[5:0] _e_897 = 1;
     assign _e_895 = \x  >> _e_897;
     assign _e_894 = _e_895 ^ \x ;
     assign output__ = _e_894;
@@ -14994,8 +14994,8 @@ endmodule
 
 module \std::cdc::sync2[1611]  (
         input clk_i,
-        input[3:0] in_i,
-        output[3:0] output__
+        input[5:0] in_i,
+        output[5:0] output__
     );
     `ifdef COCOTB_SIM
     string __top_module;
@@ -15009,12 +15009,12 @@ module \std::cdc::sync2[1611]  (
     `endif
     logic \clk ;
     assign \clk  = clk_i;
-    logic[3:0] \in ;
+    logic[5:0] \in ;
     assign \in  = in_i;
     (* src = "<compiler dir>/stdlib/cdc.spade:16,14" *)
-    reg[3:0] \sync1 ;
+    reg[5:0] \sync1 ;
     (* src = "<compiler dir>/stdlib/cdc.spade:17,14" *)
-    reg[3:0] \sync2 ;
+    reg[5:0] \sync2 ;
     always @(posedge \clk ) begin
         \sync1  <= \in ;
     end
@@ -15025,8 +15025,8 @@ module \std::cdc::sync2[1611]  (
 endmodule
 
 module \std::ops::gray_to_bin[1612]  (
-        input[3:0] gray_i,
-        output[3:0] output__
+        input[5:0] gray_i,
+        output[5:0] output__
     );
     `ifdef COCOTB_SIM
     string __top_module;
@@ -15038,19 +15038,19 @@ module \std::ops::gray_to_bin[1612]  (
         end
     end
     `endif
-    logic[3:0] \gray ;
+    logic[5:0] \gray ;
     assign \gray  = gray_i;
     (* src = "<compiler dir>/stdlib/ops.spade:62,51" *)
-    logic[3:0] \result ;
+    logic[5:0] \result ;
     (* src = "<compiler dir>/stdlib/ops.spade:62,51" *)
     \std::ops::std::ops::gray_to_bin::F[1630]  F_0(.gray_i(\gray ), .output__(\result ));
     assign output__ = \result ;
 endmodule
 
 module \std::mem::impl_11::read[1615]  (
-        input[15:0] self_i, output[3:0] self_o,
+        input[15:0] self_i, output[5:0] self_o,
         input read_clk_i,
-        input[3:0] addr_i,
+        input[5:0] addr_i,
         output[15:0] output__
     );
     `ifdef COCOTB_SIM
@@ -15065,22 +15065,22 @@ module \std::mem::impl_11::read[1615]  (
     `endif
     logic[15:0] \self ;
     assign \self  = self_i;
-    logic[3:0] \self_mut ;
+    logic[5:0] \self_mut ;
     assign self_o = \self_mut ;
     logic \read_clk ;
     assign \read_clk  = read_clk_i;
-    logic[3:0] \addr ;
+    logic[5:0] \addr ;
     assign \addr  = addr_i;
     (* src = "<compiler dir>/stdlib/mem.spade:61,5" *)
-    reg[3:0] \s1_addr ;
+    reg[5:0] \s1_addr ;
     (* src = "<compiler dir>/stdlib/mem.spade:59,13" *)
-    logic[3:0] \saddr_mut ;
+    logic[5:0] \saddr_mut ;
     (* src = "<compiler dir>/stdlib/mem.spade:59,13" *)
     logic[15:0] \sout ;
     always @(posedge \read_clk ) begin
         \s1_addr  <= \addr ;
     end
-    assign \self_mut [3:0] = \saddr_mut ;
+    assign \self_mut [5:0] = \saddr_mut ;
     assign \sout  = \self [15:0];
     assign \saddr_mut  = \addr ;
     assign output__ = \sout ;
@@ -15349,8 +15349,8 @@ module \std::mem::impl_11::read[1629]  (
 endmodule
 
 module \std::ops::std::ops::gray_to_bin::F[1630]  (
-        input[3:0] gray_i,
-        output[3:0] output__
+        input[5:0] gray_i,
+        output[5:0] output__
     );
     `ifdef COCOTB_SIM
     string __top_module;
@@ -15362,10 +15362,10 @@ module \std::ops::std::ops::gray_to_bin::F[1630]  (
         end
     end
     `endif
-    logic[3:0] \gray ;
+    logic[5:0] \gray ;
     assign \gray  = gray_i;
     (* src = "<compiler dir>/stdlib/ops.spade:67,12" *)
-    logic[3:0] \result ;
+    logic[5:0] \result ;
     (* src = "<compiler dir>/stdlib/ops.spade:67,12" *)
     \std::ops::std::ops::std::ops::gray_to_bin::F::F[1643]  F_0(.gray_i(\gray ), .output__(\result ));
     assign output__ = \result ;
@@ -15489,8 +15489,8 @@ module \std::ops::std::ops::gray_to_bin::F[1638]  (
 endmodule
 
 module \std::ops::std::ops::std::ops::gray_to_bin::F::F[1643]  (
-        input[3:0] gray_i,
-        output[3:0] output__
+        input[5:0] gray_i,
+        output[5:0] output__
     );
     `ifdef COCOTB_SIM
     string __top_module;
@@ -15502,33 +15502,33 @@ module \std::ops::std::ops::std::ops::gray_to_bin::F::F[1643]  (
         end
     end
     `endif
-    logic[3:0] \gray ;
+    logic[5:0] \gray ;
     assign \gray  = gray_i;
     (* src = "<compiler dir>/stdlib/ops.spade:68,47" *)
-    logic[3:0] _e_909;
+    logic[5:0] _e_909;
     (* src = "<compiler dir>/stdlib/ops.spade:68,33" *)
-    logic[3:0] \high_bit ;
+    logic[5:0] \high_bit ;
     (* src = "<compiler dir>/stdlib/ops.spade:69,54" *)
-    logic[3:0] _e_916;
+    logic[5:0] _e_916;
     (* src = "<compiler dir>/stdlib/ops.spade:69,47" *)
-    logic[3:0] _e_914;
+    logic[5:0] _e_914;
     (* src = "<compiler dir>/stdlib/ops.spade:69,41" *)
-    logic[2:0] \lower_gray ;
+    logic[4:0] \lower_gray ;
     (* src = "<compiler dir>/stdlib/ops.spade:70,25" *)
-    logic[2:0] _e_923;
-    logic[3:0] _e_922;
+    logic[4:0] _e_923;
+    logic[5:0] _e_922;
     (* src = "<compiler dir>/stdlib/ops.spade:70,9" *)
-    logic[3:0] _e_920;
+    logic[5:0] _e_920;
     localparam[0:0] _e_910 = 1;
-    localparam[2:0] _e_911 = 0;
+    localparam[4:0] _e_911 = 0;
     assign _e_909 = {_e_910, _e_911};
     assign \high_bit  = \gray  & _e_909;
-    localparam[3:0] _e_918 = 1;
+    localparam[5:0] _e_918 = 1;
     assign _e_916 = \high_bit  >> _e_918;
     assign _e_914 = \gray  ^ _e_916;
-    assign \lower_gray  = _e_914[2:0];
+    assign \lower_gray  = _e_914[4:0];
     (* src = "<compiler dir>/stdlib/ops.spade:70,25" *)
-    \std::ops::gray_to_bin[1623]  gray_to_bin_0(.gray_i(\lower_gray ), .output__(_e_923));
+    \std::ops::gray_to_bin[1645]  gray_to_bin_0(.gray_i(\lower_gray ), .output__(_e_923));
     assign _e_922 = {1'b0, _e_923};
     assign _e_920 = \high_bit  | _e_922;
     assign output__ = _e_920;
@@ -15574,15 +15574,15 @@ module \std::ops::std::ops::std::ops::gray_to_bin::F::F[1644]  (
     assign _e_914 = \gray  ^ _e_916;
     assign \lower_gray  = _e_914[1:0];
     (* src = "<compiler dir>/stdlib/ops.spade:70,25" *)
-    \std::ops::gray_to_bin[1645]  gray_to_bin_0(.gray_i(\lower_gray ), .output__(_e_923));
+    \std::ops::gray_to_bin[1646]  gray_to_bin_0(.gray_i(\lower_gray ), .output__(_e_923));
     assign _e_922 = {1'b0, _e_923};
     assign _e_920 = \high_bit  | _e_922;
     assign output__ = _e_920;
 endmodule
 
 module \std::ops::gray_to_bin[1645]  (
-        input[1:0] gray_i,
-        output[1:0] output__
+        input[4:0] gray_i,
+        output[4:0] output__
     );
     `ifdef COCOTB_SIM
     string __top_module;
@@ -15594,16 +15594,16 @@ module \std::ops::gray_to_bin[1645]  (
         end
     end
     `endif
-    logic[1:0] \gray ;
+    logic[4:0] \gray ;
     assign \gray  = gray_i;
     (* src = "<compiler dir>/stdlib/ops.spade:62,51" *)
-    logic[1:0] \result ;
+    logic[4:0] \result ;
     (* src = "<compiler dir>/stdlib/ops.spade:62,51" *)
-    \std::ops::std::ops::gray_to_bin::F[1646]  F_0(.gray_i(\gray ), .output__(\result ));
+    \std::ops::std::ops::gray_to_bin::F[1647]  F_0(.gray_i(\gray ), .output__(\result ));
     assign output__ = \result ;
 endmodule
 
-module \std::ops::std::ops::gray_to_bin::F[1646]  (
+module \std::ops::gray_to_bin[1646]  (
         input[1:0] gray_i,
         output[1:0] output__
     );
@@ -15611,9 +15611,55 @@ module \std::ops::std::ops::gray_to_bin::F[1646]  (
     string __top_module;
     string __vcd_file;
     initial begin
-        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::std::ops::gray_to_bin::F[1646]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
+        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::gray_to_bin[1646]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
             $dumpfile (__vcd_file);
-            $dumpvars (0, \std::ops::std::ops::gray_to_bin::F[1646] );
+            $dumpvars (0, \std::ops::gray_to_bin[1646] );
+        end
+    end
+    `endif
+    logic[1:0] \gray ;
+    assign \gray  = gray_i;
+    (* src = "<compiler dir>/stdlib/ops.spade:62,51" *)
+    logic[1:0] \result ;
+    (* src = "<compiler dir>/stdlib/ops.spade:62,51" *)
+    \std::ops::std::ops::gray_to_bin::F[1648]  F_0(.gray_i(\gray ), .output__(\result ));
+    assign output__ = \result ;
+endmodule
+
+module \std::ops::std::ops::gray_to_bin::F[1647]  (
+        input[4:0] gray_i,
+        output[4:0] output__
+    );
+    `ifdef COCOTB_SIM
+    string __top_module;
+    string __vcd_file;
+    initial begin
+        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::std::ops::gray_to_bin::F[1647]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
+            $dumpfile (__vcd_file);
+            $dumpvars (0, \std::ops::std::ops::gray_to_bin::F[1647] );
+        end
+    end
+    `endif
+    logic[4:0] \gray ;
+    assign \gray  = gray_i;
+    (* src = "<compiler dir>/stdlib/ops.spade:67,12" *)
+    logic[4:0] \result ;
+    (* src = "<compiler dir>/stdlib/ops.spade:67,12" *)
+    \std::ops::std::ops::std::ops::gray_to_bin::F::F[1649]  F_0(.gray_i(\gray ), .output__(\result ));
+    assign output__ = \result ;
+endmodule
+
+module \std::ops::std::ops::gray_to_bin::F[1648]  (
+        input[1:0] gray_i,
+        output[1:0] output__
+    );
+    `ifdef COCOTB_SIM
+    string __top_module;
+    string __vcd_file;
+    initial begin
+        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::std::ops::gray_to_bin::F[1648]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
+            $dumpfile (__vcd_file);
+            $dumpvars (0, \std::ops::std::ops::gray_to_bin::F[1648] );
         end
     end
     `endif
@@ -15622,11 +15668,57 @@ module \std::ops::std::ops::gray_to_bin::F[1646]  (
     (* src = "<compiler dir>/stdlib/ops.spade:67,12" *)
     logic[1:0] \result ;
     (* src = "<compiler dir>/stdlib/ops.spade:67,12" *)
-    \std::ops::std::ops::std::ops::gray_to_bin::F::F[1647]  F_0(.gray_i(\gray ), .output__(\result ));
+    \std::ops::std::ops::std::ops::gray_to_bin::F::F[1650]  F_0(.gray_i(\gray ), .output__(\result ));
     assign output__ = \result ;
 endmodule
 
-module \std::ops::std::ops::std::ops::gray_to_bin::F::F[1647]  (
+module \std::ops::std::ops::std::ops::gray_to_bin::F::F[1649]  (
+        input[4:0] gray_i,
+        output[4:0] output__
+    );
+    `ifdef COCOTB_SIM
+    string __top_module;
+    string __vcd_file;
+    initial begin
+        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::std::ops::std::ops::gray_to_bin::F::F[1649]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
+            $dumpfile (__vcd_file);
+            $dumpvars (0, \std::ops::std::ops::std::ops::gray_to_bin::F::F[1649] );
+        end
+    end
+    `endif
+    logic[4:0] \gray ;
+    assign \gray  = gray_i;
+    (* src = "<compiler dir>/stdlib/ops.spade:68,47" *)
+    logic[4:0] _e_909;
+    (* src = "<compiler dir>/stdlib/ops.spade:68,33" *)
+    logic[4:0] \high_bit ;
+    (* src = "<compiler dir>/stdlib/ops.spade:69,54" *)
+    logic[4:0] _e_916;
+    (* src = "<compiler dir>/stdlib/ops.spade:69,47" *)
+    logic[4:0] _e_914;
+    (* src = "<compiler dir>/stdlib/ops.spade:69,41" *)
+    logic[3:0] \lower_gray ;
+    (* src = "<compiler dir>/stdlib/ops.spade:70,25" *)
+    logic[3:0] _e_923;
+    logic[4:0] _e_922;
+    (* src = "<compiler dir>/stdlib/ops.spade:70,9" *)
+    logic[4:0] _e_920;
+    localparam[0:0] _e_910 = 1;
+    localparam[3:0] _e_911 = 0;
+    assign _e_909 = {_e_910, _e_911};
+    assign \high_bit  = \gray  & _e_909;
+    localparam[4:0] _e_918 = 1;
+    assign _e_916 = \high_bit  >> _e_918;
+    assign _e_914 = \gray  ^ _e_916;
+    assign \lower_gray  = _e_914[3:0];
+    (* src = "<compiler dir>/stdlib/ops.spade:70,25" *)
+    \std::ops::gray_to_bin[1651]  gray_to_bin_0(.gray_i(\lower_gray ), .output__(_e_923));
+    assign _e_922 = {1'b0, _e_923};
+    assign _e_920 = \high_bit  | _e_922;
+    assign output__ = _e_920;
+endmodule
+
+module \std::ops::std::ops::std::ops::gray_to_bin::F::F[1650]  (
         input[1:0] gray_i,
         output[1:0] output__
     );
@@ -15634,9 +15726,9 @@ module \std::ops::std::ops::std::ops::gray_to_bin::F::F[1647]  (
     string __top_module;
     string __vcd_file;
     initial begin
-        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::std::ops::std::ops::gray_to_bin::F::F[1647]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
+        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::std::ops::std::ops::gray_to_bin::F::F[1650]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
             $dumpfile (__vcd_file);
-            $dumpvars (0, \std::ops::std::ops::std::ops::gray_to_bin::F::F[1647] );
+            $dumpvars (0, \std::ops::std::ops::std::ops::gray_to_bin::F::F[1650] );
         end
     end
     `endif
@@ -15666,13 +15758,36 @@ module \std::ops::std::ops::std::ops::gray_to_bin::F::F[1647]  (
     assign _e_914 = \gray  ^ _e_916;
     assign \lower_gray  = _e_914[0:0];
     (* src = "<compiler dir>/stdlib/ops.spade:70,25" *)
-    \std::ops::gray_to_bin[1648]  gray_to_bin_0(.gray_i(\lower_gray ), .output__(_e_923));
+    \std::ops::gray_to_bin[1652]  gray_to_bin_0(.gray_i(\lower_gray ), .output__(_e_923));
     assign _e_922 = {1'b0, _e_923};
     assign _e_920 = \high_bit  | _e_922;
     assign output__ = _e_920;
 endmodule
 
-module \std::ops::gray_to_bin[1648]  (
+module \std::ops::gray_to_bin[1651]  (
+        input[3:0] gray_i,
+        output[3:0] output__
+    );
+    `ifdef COCOTB_SIM
+    string __top_module;
+    string __vcd_file;
+    initial begin
+        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::gray_to_bin[1651]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
+            $dumpfile (__vcd_file);
+            $dumpvars (0, \std::ops::gray_to_bin[1651] );
+        end
+    end
+    `endif
+    logic[3:0] \gray ;
+    assign \gray  = gray_i;
+    (* src = "<compiler dir>/stdlib/ops.spade:62,51" *)
+    logic[3:0] \result ;
+    (* src = "<compiler dir>/stdlib/ops.spade:62,51" *)
+    \std::ops::std::ops::gray_to_bin::F[1653]  F_0(.gray_i(\gray ), .output__(\result ));
+    assign output__ = \result ;
+endmodule
+
+module \std::ops::gray_to_bin[1652]  (
         input gray_i,
         output output__
     );
@@ -15680,9 +15795,9 @@ module \std::ops::gray_to_bin[1648]  (
     string __top_module;
     string __vcd_file;
     initial begin
-        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::gray_to_bin[1648]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
+        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::gray_to_bin[1652]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
             $dumpfile (__vcd_file);
-            $dumpvars (0, \std::ops::gray_to_bin[1648] );
+            $dumpvars (0, \std::ops::gray_to_bin[1652] );
         end
     end
     `endif
@@ -15691,11 +15806,34 @@ module \std::ops::gray_to_bin[1648]  (
     (* src = "<compiler dir>/stdlib/ops.spade:62,51" *)
     logic \result ;
     (* src = "<compiler dir>/stdlib/ops.spade:62,51" *)
-    \std::ops::std::ops::gray_to_bin::F[1649]  F_0(.gray_i(\gray ), .output__(\result ));
+    \std::ops::std::ops::gray_to_bin::F[1654]  F_0(.gray_i(\gray ), .output__(\result ));
     assign output__ = \result ;
 endmodule
 
-module \std::ops::std::ops::gray_to_bin::F[1649]  (
+module \std::ops::std::ops::gray_to_bin::F[1653]  (
+        input[3:0] gray_i,
+        output[3:0] output__
+    );
+    `ifdef COCOTB_SIM
+    string __top_module;
+    string __vcd_file;
+    initial begin
+        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::std::ops::gray_to_bin::F[1653]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
+            $dumpfile (__vcd_file);
+            $dumpvars (0, \std::ops::std::ops::gray_to_bin::F[1653] );
+        end
+    end
+    `endif
+    logic[3:0] \gray ;
+    assign \gray  = gray_i;
+    (* src = "<compiler dir>/stdlib/ops.spade:67,12" *)
+    logic[3:0] \result ;
+    (* src = "<compiler dir>/stdlib/ops.spade:67,12" *)
+    \std::ops::std::ops::std::ops::gray_to_bin::F::F[1655]  F_0(.gray_i(\gray ), .output__(\result ));
+    assign output__ = \result ;
+endmodule
+
+module \std::ops::std::ops::gray_to_bin::F[1654]  (
         input gray_i,
         output output__
     );
@@ -15703,9 +15841,9 @@ module \std::ops::std::ops::gray_to_bin::F[1649]  (
     string __top_module;
     string __vcd_file;
     initial begin
-        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::std::ops::gray_to_bin::F[1649]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
+        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::std::ops::gray_to_bin::F[1654]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
             $dumpfile (__vcd_file);
-            $dumpvars (0, \std::ops::std::ops::gray_to_bin::F[1649] );
+            $dumpvars (0, \std::ops::std::ops::gray_to_bin::F[1654] );
         end
     end
     `endif
@@ -15714,11 +15852,57 @@ module \std::ops::std::ops::gray_to_bin::F[1649]  (
     (* src = "<compiler dir>/stdlib/ops.spade:67,12" *)
     logic \result ;
     (* src = "<compiler dir>/stdlib/ops.spade:67,12" *)
-    \std::ops::std::ops::std::ops::gray_to_bin::F::T[1650]  T_0(.gray_i(\gray ), .output__(\result ));
+    \std::ops::std::ops::std::ops::gray_to_bin::F::T[1656]  T_0(.gray_i(\gray ), .output__(\result ));
     assign output__ = \result ;
 endmodule
 
-module \std::ops::std::ops::std::ops::gray_to_bin::F::T[1650]  (
+module \std::ops::std::ops::std::ops::gray_to_bin::F::F[1655]  (
+        input[3:0] gray_i,
+        output[3:0] output__
+    );
+    `ifdef COCOTB_SIM
+    string __top_module;
+    string __vcd_file;
+    initial begin
+        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::std::ops::std::ops::gray_to_bin::F::F[1655]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
+            $dumpfile (__vcd_file);
+            $dumpvars (0, \std::ops::std::ops::std::ops::gray_to_bin::F::F[1655] );
+        end
+    end
+    `endif
+    logic[3:0] \gray ;
+    assign \gray  = gray_i;
+    (* src = "<compiler dir>/stdlib/ops.spade:68,47" *)
+    logic[3:0] _e_909;
+    (* src = "<compiler dir>/stdlib/ops.spade:68,33" *)
+    logic[3:0] \high_bit ;
+    (* src = "<compiler dir>/stdlib/ops.spade:69,54" *)
+    logic[3:0] _e_916;
+    (* src = "<compiler dir>/stdlib/ops.spade:69,47" *)
+    logic[3:0] _e_914;
+    (* src = "<compiler dir>/stdlib/ops.spade:69,41" *)
+    logic[2:0] \lower_gray ;
+    (* src = "<compiler dir>/stdlib/ops.spade:70,25" *)
+    logic[2:0] _e_923;
+    logic[3:0] _e_922;
+    (* src = "<compiler dir>/stdlib/ops.spade:70,9" *)
+    logic[3:0] _e_920;
+    localparam[0:0] _e_910 = 1;
+    localparam[2:0] _e_911 = 0;
+    assign _e_909 = {_e_910, _e_911};
+    assign \high_bit  = \gray  & _e_909;
+    localparam[3:0] _e_918 = 1;
+    assign _e_916 = \high_bit  >> _e_918;
+    assign _e_914 = \gray  ^ _e_916;
+    assign \lower_gray  = _e_914[2:0];
+    (* src = "<compiler dir>/stdlib/ops.spade:70,25" *)
+    \std::ops::gray_to_bin[1623]  gray_to_bin_0(.gray_i(\lower_gray ), .output__(_e_923));
+    assign _e_922 = {1'b0, _e_923};
+    assign _e_920 = \high_bit  | _e_922;
+    assign output__ = _e_920;
+endmodule
+
+module \std::ops::std::ops::std::ops::gray_to_bin::F::T[1656]  (
         input gray_i,
         output output__
     );
@@ -15726,9 +15910,9 @@ module \std::ops::std::ops::std::ops::gray_to_bin::F::T[1650]  (
     string __top_module;
     string __vcd_file;
     initial begin
-        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::std::ops::std::ops::gray_to_bin::F::T[1650]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
+        if ($value$plusargs("TOP_MODULE=%s", __top_module) && __top_module == "std::ops::std::ops::std::ops::gray_to_bin::F::T[1656]" && $value$plusargs("VCD_FILENAME=%s", __vcd_file)) begin
             $dumpfile (__vcd_file);
-            $dumpvars (0, \std::ops::std::ops::std::ops::gray_to_bin::F::T[1650] );
+            $dumpvars (0, \std::ops::std::ops::std::ops::gray_to_bin::F::T[1656] );
         end
     end
     `endif
