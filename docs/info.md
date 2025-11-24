@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+For now, see https://blog.spade-lang.org/quickscope/
 
 ## How to test
 
-Explain how to use your project
+Connect the thing with uart, then run the quickscope client
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+You'll need a UART adapter and something to analyze
