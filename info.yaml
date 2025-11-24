@@ -23,7 +23,7 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "data_in[0]"
+  ui[0]: "data_in[0] and trigger"
   ui[1]: "data_in[1]"
   ui[2]: "data_in[2]"
   ui[3]: "data_in[3]"
@@ -33,24 +33,24 @@ pinout:
   ui[7]: "data_in[7]"
 
   # Outputs
-  uo[0]: "data input"
-  uo[1]: "data input"
-  uo[2]: "data input"
-  uo[3]: "data input"
-  uo[4]: "data input"
-  uo[5]: "data input"
-  uo[6]: "data input"
-  uo[7]: "data input"
+  uo[0]: "Uart out"
+  uo[1]: "Unused"
+  uo[2]: "Unused"
+  uo[3]: "Unused"
+  uo[4]: "Unused"
+  uo[5]: "Unused"
+  uo[6]: "Unused"
+  uo[7]: "Unused"
 
   # Bidirectional pins
-  uio[0]: "data input"
-  uio[1]: "data input"
-  uio[2]: "data input"
-  uio[3]: "data input"
-  uio[4]: "data input"
-  uio[5]: "data input"
-  uio[6]: "data input"
-  uio[7]: "data input"
+  uio[0]: "Unused"
+  uio[1]: "Unused"
+  uio[2]: "Unused"
+  uio[3]: "Unused"
+  uio[4]: "Unused"
+  uio[5]: "Unused"
+  uio[6]: "Unused"
+  uio[7]: "Unused"
 
 # Do not change!
 yaml_version: 6

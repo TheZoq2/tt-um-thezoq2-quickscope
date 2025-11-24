@@ -13,7 +13,10 @@ For now, see https://blog.spade-lang.org/quickscope/
 
 ## How to test
 
-Connect the thing with uart, then run the quickscope client
+Connect the thing with UART, then run the quickscope client. When `ui[0]` is
+high, the logic analyzer will trigger and send the `ui[0]..[7] and uio[0]..[7]`
+values to the host which will generate a `.vcd` file that can be viewed in
+Surfer.
 
 ## External hardware
 
