@@ -1,0 +1,38 @@
+use std::conv::uint_to_bits;
+use protocols::uart::UartConfig;
+
+#[no_mangle(all)]
+entity tt_um_thezoq2_quickscope(
+    ena: bool,      // always 1 when the design is powered, so you can ignore it
+    clk: clock,      // clock
+    rst_n: bool,     // reset_n - low to reset
+
+    ui_in: uint<8>,    // Dedicated inputs
+    uo_out: inv &[bool; 8],   // Dedicated outputs
+    uio_in: uint<8>,   // IOs: Input path
+    uio_out: inv &uint<8>,  // IOs: Output path
+    uio_oe: inv &uint<8>,   // IOs: Enable path (active high: 0=input, 1=output)
+   
+) {
+    let rst = !rst_n;
+
+    let uart_out = port;
+
+    inst quickscope::quickscope::<_, 2, 16>(
+            clk,
+            rst,
+            ui_in.to_bits()[0],
+            (ui_in, uio_in)
+        )
+        .inst into_uart(
+            clk,
+            rst,
+            UartConfig$(bit_time: 217, stop_bits: 1, parity: false),
+            uart_out#1
+        );
+
+    set uio_oe = &0;
+    set uio_out = &0;
+
+    set uo_out = &[*uart_out#0, false, false, false, false, false, false, false];
+}
