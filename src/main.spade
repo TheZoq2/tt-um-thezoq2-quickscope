@@ -18,7 +18,7 @@ entity tt_um_thezoq2_quickscope(
 
     let uart_out = port;
 
-    inst quickscope::quickscope::<_, 2, 64>(
+    inst quickscope::quickscope::<_, 2, 16>(
             clk,
             rst,
             ui_in.to_bits()[0],
